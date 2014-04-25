@@ -212,5 +212,6 @@ Config
 The Config resource returns the configuration that is used by the service.  Typically this is a json representation of the configuration however it is left here as implementation dependent.
 
 Valid response codes: 200 OK
+
 Response Media Type: application/json
 
