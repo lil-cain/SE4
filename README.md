@@ -29,4 +29,8 @@ SE4 was the fourth software engineering spec drafted when Beamly first began in 
 
 Originally it was used by one team during an effort to simplify working with finer grained services, the idea being you should not need to know anything about the service in order to discover some basic operational information.  The convention proved very useful and became widely adopted within Beamly to the extent that is now mandatory that all services expose this information.
 
+License
+-------
+
+This spec is licensed under CC0 V1.0 License, please see [here](LICENSE)
 
