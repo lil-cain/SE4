@@ -35,6 +35,7 @@ Status
 The status resource returns information about the service.
 
 Valid Response Codes: 200 OK
+
 Response Media Type: application/json
 
 
@@ -64,9 +65,12 @@ vm_vendor        | O<sup>2</sup>   | String    | The vendor of the VM that the s
 vm_version       | O<sup>2</sup>   | String    | The version of the VM that the service is running on                         | "24.51-b03"
 
  M         Mandatory
+
  O         Optional
- O<sup>1   Optional - however mandatory for compiled languages
- O<sup>2   Optional - however mandatory for virtual machine based languages
+
+ O<sup>1</sup>   Optional - however mandatory for compiled languages
+
+ O<sup>2 </sup>  Optional - however mandatory for virtual machine based languages
 
 
 Example:
@@ -114,6 +118,7 @@ The healthcheck resource provides information about internal health and its perc
 Important: the healthcheck resource must not block waiting for healthcheck probes to execute, it should return the last known status.
 
 Valid response codes: 200 OK
+
 Response Media Type: application/json
 
 
