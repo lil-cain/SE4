@@ -8,6 +8,8 @@ Objective
 The object of this specification is to provide a standard convention for access to server status, configuration and live health via HTTP (and SPDY if supported by the service).
 Services within the Beamly environment must implement this specification in order to be deployed into the production environment.
 
+Important: these endpoints are only intended for internal consumption and not intended to be available externally, doing so may leak sensitive information outside your system.
+
 
 Resources
 ---------
