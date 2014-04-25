@@ -15,7 +15,7 @@ Resources
 The following resources must be implemented:
 
 Name             | HTTP Verb | URI Path
------------------+-----------+-------------------------
+-----------------|-----------|-------------------------
 Status           | GET       | /service/status
 Healthcheck      | GET       | /service/healthcheck
 GTG (Good to Go) | GET       | /service/healthcheck/gtg
@@ -25,7 +25,7 @@ Service Canary   | GET       | /service/healthcheck/asg
 The following resources are desirable:
 
 Name   | HTTP Verb | URI Path
--------+-----------+----------------
+-------|-----------|----------------
 Config | GET       | /service/config
 
 
@@ -38,30 +38,30 @@ Valid Response Codes: 200 OK
 Response Media Type: application/json
 
 
-Element Path     | Required? | Type      | Description                                                                  | Example
------------------+-----------+-----------+------------------------------------------------------------------------------+------------------------------------------
-artifact_id      | M         | String    | Artifact name or maven artifact id                                           | "cpt-server"
-build_number     | M         | String    | The build pipeline number                                                    | "1537.1"
-build_machine    | M         | String    | The machine the artifact was built or verified on                            | "ip-10-4-1-16 (127.0.1.1)"
-built_by         | M         | String    | The user that did the build                                                  | "go"
-built_when       | M         | String    | When the build was done                                                      | "20140303-1746"
-compiler_version | O<sup>1   | String    | The compiler version                                                         | "1.7.0_51"
-current_time     | M         | String    | The current time (time of request)                                           | "Wed Mar 12 19:40:18 GMT 2014"
-git_sha1         | M         | String    | The git sha1 that can be used to identify the primary material for the build | "d567d2650318f704747204815adedd2396a203f5"
-group_id         | O         | String    | The maven group id                                                           | "beamly.platform"
-machine_name     | M         | String    | The name of the machine responding to this request                           | "ip-10-1-11-196 (127.0.1.1)"
-os_arch          | M         | String    | The architecture the OS of the machine responding to the request             | "amd64"
-os_avgload       | O         | String    | The average load of the machine responding to the request                    | "0.0"
-os_name          | M         | String    | The name of the OS of the machine responding to the request                  | "Linux"
-os_numprocessors | O         | String    | The number of processors of the machine responding to the request            | "2"
-os_version       | M         | String    | The version of the OS of the machine responding to the request               | "3.2.0-55-virtual"
-runbook_uri      | M         | URI       | The URI where the RUNBOOK can be found                                       | "https://XXXXXX/RUNBOOKS/CPT+Runbook"
-up_duration      | M         | String    | How long the service responding to the request has been up                   | "730444633 milliseconds"
-up_since         | M         | String    | The time at which the service was started                                    | "Tue Mar 04 08:46:13 GMT 2014"
-version          | M         | String    | The version of the service responding to the request	                        | "1537"
-vm_name          | O<sup>2   | String    | The name of the VM that the service is running on                            | "Java HotSpot(TM) 64-Bit Server VM"
-vm_vendor        | O<sup>2   | String    | The vendor of the VM that the service is running on                          | "Oracle Corporation"
-vm_version       | O<sup>2   | String    | The version of the VM that the service is running on                         | "24.51-b03"
+Element Path     | Required?       | Type      | Description                                                                  | Example
+-----------------|-----------------|-----------|------------------------------------------------------------------------------|------------------------------------------
+artifact_id      | M               | String    | Artifact name or maven artifact id                                           | "cpt-server"
+build_number     | M               | String    | The build pipeline number                                                    | "1537.1"
+build_machine    | M               | String    | The machine the artifact was built or verified on                            | "ip-10-4-1-16 (127.0.1.1)"
+built_by         | M               | String    | The user that did the build                                                  | "go"
+built_when       | M               | String    | When the build was done                                                      | "20140303-1746"
+compiler_version | O<sup>1</sup>   | String    | The compiler version                                                         | "1.7.0_51"
+current_time     | M               | String    | The current time (time of request)                                           | "Wed Mar 12 19:40:18 GMT 2014"
+git_sha1         | M               | String    | The git sha1 that can be used to identify the primary material for the build | "d567d2650318f704747204815adedd2396a203f5"
+group_id         | O               | String    | The maven group id                                                           | "beamly.platform"
+machine_name     | M               | String    | The name of the machine responding to this request                           | "ip-10-1-11-196 (127.0.1.1)"
+os_arch          | M               | String    | The architecture the OS of the machine responding to the request             | "amd64"
+os_avgload       | O               | String    | The average load of the machine responding to the request                    | "0.0"
+os_name          | M               | String    | The name of the OS of the machine responding to the request                  | "Linux"
+os_numprocessors | O               | String    | The number of processors of the machine responding to the request            | "2"
+os_version       | M               | String    | The version of the OS of the machine responding to the request               | "3.2.0-55-virtual"
+runbook_uri      | M               | URI       | The URI where the RUNBOOK can be found                                       | "https://XXXXXX/RUNBOOKS/CPT+Runbook"
+up_duration      | M               | String    | How long the service responding to the request has been up                   | "730444633 milliseconds"
+up_since         | M               | String    | The time at which the service was started                                    | "Tue Mar 04 08:46:13 GMT 2014"
+version          | M               | String    | The version of the service responding to the request	                        | "1537"
+vm_name          | O<sup>2</sup>   | String    | The name of the VM that the service is running on                            | "Java HotSpot(TM) 64-Bit Server VM"
+vm_vendor        | O<sup>2</sup>   | String    | The vendor of the VM that the service is running on                          | "Oracle Corporation"
+vm_version       | O<sup>2</sup>   | String    | The version of the VM that the service is running on                         | "24.51-b03"
 
  M         Mandatory
  O         Optional
@@ -118,7 +118,7 @@ Response Media Type: application/json
 
 
 Element Path            | Required? | Type          | Description                                                                      | Example
-------------------------+-----------+---------------+----------------------------------------------------------------------------------+---------------------------
+------------------------|-----------|---------------|----------------------------------------------------------------------------------|---------------------------
 report_as_of            | M         | DateTime      | The time at which this report was generated (this may not be the current time)   | "2014-03-12T20:16:55.447Z"
 report_duration         | M         | String        | How long it took to generate the report                                          | "0 seconds"
 tests                   | M         | Array         | array of test results	                                                       |
