@@ -189,7 +189,7 @@ A failed response is a 5XX reponse with either a 500 or 503 response preferred. 
 ASG - Service Canary
 --------------------
 
-The "Service Canary" (ASG) returns a successful response in the case that the service is in a healthy state.  If a service returns a failure response or fails to respond within a predefined timeout then the service can expect to be terminated and replaced.  (Typcially this resouce is used in auto-scaling group healthchecks.)
+The "Service Canary" (ASG) returns a successful response in the case that the service is in a healthy state.  If a service returns a failure response or fails to respond within a predefined timeout then the service can expect to be terminated and replaced.  (Typically this resouce is used in auto-scaling group healthchecks.)
 
 A successful response is a 200 OK with a content of the text "OK" (including quotes) and a media type of "plain/text"
 
