@@ -49,7 +49,7 @@ build_machine    | M               | String    | The machine the artifact was bu
 built_by         | M               | String    | The user that did the build                                                  | "go"
 built_when       | M               | String    | When the build was done                                                      | "20140303-1746"
 compiler_version | O<sup>1</sup>   | String    | The compiler version                                                         | "1.7.0_51"
-current_time     | M               | String    | The current time (time of request)                                           | "Wed Mar 12 19:40:18 GMT 2014"
+current_time     | M               | DateTime  | The current time (time of request)                                           | "2014-03-12T19:40:18.877Z"
 git_sha1         | M               | String    | The git sha1 that can be used to identify the primary material for the build | "d567d2650318f704747204815adedd2396a203f5"
 group_id         | O               | String    | The maven group id                                                           | "beamly.platform"
 machine_name     | M               | String    | The name of the machine responding to this request                           | "ip-10-1-11-196 (127.0.1.1)"
@@ -60,7 +60,7 @@ os_numprocessors | O               | String    | The number of processors of the
 os_version       | M               | String    | The version of the OS of the machine responding to the request               | "3.2.0-55-virtual"
 runbook_uri      | M               | URI       | The URI where the RUNBOOK can be found                                       | "https://XXXXXX/RUNBOOKS/CPT+Runbook"
 up_duration      | M               | String    | How long the service responding to the request has been up                   | "730444633 milliseconds"
-up_since         | M               | String    | The time at which the service was started                                    | "Tue Mar 04 08:46:13 GMT 2014"
+up_since         | M               | DateTime  | The time at which the service was started                                    | "2014-03-04T08:46:13.877Z"
 version          | M               | String    | The version of the service responding to the request	                        | "1537"
 vm_name          | O<sup>2</sup>   | String    | The name of the VM that the service is running on                            | "Java HotSpot(TM) 64-Bit Server VM"
 vm_vendor        | O<sup>2</sup>   | String    | The vendor of the VM that the service is running on                          | "Oracle Corporation"
@@ -92,7 +92,7 @@ Example:
     "built_by": "go",
     "built_when": "20140417-1342",
     "compiler_version": "1.7.0_51",
-    "current_time": "Fri Apr 25 14:30:58 GMT 2014",
+    "current_time": "2014-04-25T14:30:58.877Z",
     "git_sha1": "f61f8a375c6a5656a434a011cf93a245815a3e78",
     "group_id": "beamly.platform",
     "machine_name": "ip-10-0-1-231 (127.0.1.1)",
@@ -103,7 +103,7 @@ Example:
     "os_version": "3.2.0-55-virtual",
     "runbook_uri": "https://XXXXXXXXXXXXXXX/XXXXX/RUNBOOKS/CPT+Runbook",
     "up_duration": "283103946 milliseconds",
-    "up_since": "Tue Apr 22 07:52:34 GMT 2014",
+    "up_since": "2014-04-22T07:52:34.877Z",
     "version": "1552",
     "vm_name": "Java HotSpot(TM) 64-Bit Server VM",
     "vm_vendor": "Oracle Corporation",
