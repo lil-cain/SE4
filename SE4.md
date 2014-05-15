@@ -16,23 +16,23 @@ Resources
 
 The following resources must be implemented:
 
-Name             | HTTP Verb | URI Path
------------------|-----------|-------------------------
-Status           | GET       | /service/status
-Healthcheck      | GET       | /service/healthcheck
-GTG (Good to Go) | GET       | /service/healthcheck/gtg
-Service Canary   | GET       | /service/healthcheck/asg
+Name                        | HTTP Verb | URI Path
+----------------------------|-----------|-------------------------
+[Status](#status)           | GET       | /service/status
+[Healthcheck](#healthcheck) | GET       | /service/healthcheck
+[GTG (Good to Go)](#gtg)    | GET       | /service/healthcheck/gtg
+[Service Canary](#asg)      | GET       | /service/healthcheck/asg
 
 
 The following resources are desirable:
 
-Name   | HTTP Verb | URI Path
--------|-----------|----------------
-Config | GET       | /service/config
+Name              | HTTP Verb | URI Path
+------------------|-----------|----------------
+[Config](#config) | GET       | /service/config
 
 
-Status
-------
+<a name="status">Status</a>
+---------------------------
 
 The status resource returns information about the service.
 
@@ -112,8 +112,8 @@ Example:
 ```
 
 
-Healthcheck
------------
+<a name="healthcheck">Healthcheck</a>
+-------------------------------------
 
 The healthcheck resource provides information about internal health and its perceived health of downstream dependencies.
 
@@ -161,8 +161,8 @@ Example:
 ```
  
 
-GTG - Good to Go
-----------------
+<a name="gtg">GTG - Good to Go</a>
+----------------------------------
 
 The "Good To Go" (GTG) returns a successful response in the case that the service is in an operational state and is able to receive traffic.  This resource is used by load balancers and monitoring tools to determine if traffic should be routed to this service or not.
 
@@ -186,8 +186,8 @@ A failed response is a 5XX reponse with either a 500 or 503 response preferred. 
 ```
 
 
-ASG - Service Canary
---------------------
+<a name="asg">ASG - Service Canary</a>
+--------------------------------------
 
 The "Service Canary" (ASG) returns a successful response in the case that the service is in a healthy state.  If a service returns a failure response or fails to respond within a predefined timeout then the service can expect to be terminated and replaced.  (Typically this resouce is used in auto-scaling group healthchecks.)
 
@@ -208,8 +208,8 @@ A failed response is a 5XX reponse with either a 500 or 503 response preferred. 
 ```
 
 
-Config
-------
+<a name="config">Config</a>
+---------------------------
 
 The Config resource returns the configuration that is used by the service.  Typically this is a json representation of the configuration however it is left here as implementation dependent.
 
